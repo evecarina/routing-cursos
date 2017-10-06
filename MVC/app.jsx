@@ -6,7 +6,7 @@ class Home extends React.Component {
 	render() {
 		return (
 			<div className="main-content home">	
-      		<h2>Front End Course Directory</h2>
+      	<h2>Front End Course Directory</h2>
 				<p>This fun directory is a project for the <em>React Router Basics</em> course on Treehouse.</p>
 				<p>Learn front end web development and much more! This simple directory app offers a preview of our course
 					library. Choose from many hours of content, from HTML to CSS to JavaScript. Learn to code and get the
@@ -35,49 +35,48 @@ class About extends React.Component {
 class Teachers extends React.Component {
 	render() {
 		return (
-	
-  <div class="main-content">
-    <h2>Teachers</h2>
-    <ul class="group">
-      <li class="teacher">
-        <img class="teacher-img" src="http://treehouse-code-samples.s3.amazonaws.com/bootstrap-4/img/angie.png" alt="teacher"/>
-        <h3>Angie McAngular</h3>
-        <p>Angie is a web developer and teacher who is passionate about building scalable, data driven web apps, especially ones that address old problems with new tech!</p>
-      </li>
+	<div class="container">
+    <div className="row">
+      <div className="col-sm-6">
+        <img className="teacher-img" src="http://treehouse-code-samples.s3.amazonaws.com/bootstrap-4/img/angie.png" alt="teacher"/>
+          <h3>Angie McAngular</h3>
+        <p>Angie is a web developer and teacher who is passionate about building scalable, data driven web apps, especially ones that address old problems with new tech!</p></div>
+      <div className="col-sm-6">
+          <img className="teacher-img" src="http://treehouse-code-samples.s3.amazonaws.com/bootstrap-4/img/nodestradamus.png" alt="teacher"/>
+          <h3>NodeStradamus</h3>
+          <p>'NodeStra' is a software engineer and philosopher trying to leave the world better than he found it. He codes for non-profits, eCommerce, and large-scale web apps.</p>
+      </div>
+    </div>
 
-      <li class="teacher">
-        <img class="teacher-img" src="http://treehouse-code-samples.s3.amazonaws.com/bootstrap-4/img/nodestradamus.png" alt="teacher"/>
-        <h3>NodeStradamus</h3>
-        <p>'NodeStra' is a software engineer and philosopher trying to leave the world better than he found it. He codes for non-profits, eCommerce, and large-scale web apps.</p>
-      </li>
+    <div className="row">
+      <div className="col-sm-6">
+          <img class="teacher-img" src="http://treehouse-code-samples.s3.amazonaws.com/bootstrap-4/img/geo.png" alt="teacher"/>
+          <h3>Geo 'Lo' Cation</h3>
+          <p>Geo is a JavaScript developer working on large-scale applications. He's also a teacher who strives to support students in removing all barriers to learning code.</p>
+      </div>
+      <div className="col-sm-6">
+          <img class="teacher-img" src="http://treehouse-code-samples.s3.amazonaws.com/bootstrap-4/img/ecma.png" alt="teacher"/>
+          <h3>Ecma Scriptnstuff</h3>
+          <p>Ecma found her passion for computers and programming over 15 years ago. She is excited to introduce people to the wonderful world of JavaScript.</p>
+      </div>
+    </div>
 
-      <li class="teacher">
-        <img class="teacher-img" src="http://treehouse-code-samples.s3.amazonaws.com/bootstrap-4/img/geo.png" alt="teacher"/>
-        <h3>Geo 'Lo' Cation</h3>
-        <p>Geo is a JavaScript developer working on large-scale applications. He's also a teacher who strives to support students in removing all barriers to learning code.</p>
-      </li>
 
-      
-      <li class="teacher">
-        <img class="teacher-img" src="http://treehouse-code-samples.s3.amazonaws.com/bootstrap-4/img/ecma.png" alt="teacher"/>
-        <h3>Ecma Scriptnstuff</h3>
-        <p>Ecma found her passion for computers and programming over 15 years ago. She is excited to introduce people to the wonderful world of JavaScript.</p>
-      </li>
-
-      <li class="teacher">
-        <img class="teacher-img" src="http://treehouse-code-samples.s3.amazonaws.com/bootstrap-4/img/jay.png" alt="teacher"/>
-        <h3>Jay Query</h3>
-        <p>Jay is a developer, author of CSS: The Missing Manual, JavaScript &amp; jQuery: The Missing Manual, and web development teacher.</p>
-      </li>
-      <li class="teacher"><img class="teacher-img" src="http://treehouse-code-samples.s3.amazonaws.com/bootstrap-4/img/json.png" alt="teacher"/>
+    <div className="row">
+      <div className="col-sm-6">
+          <img class="teacher-img" src="http://treehouse-code-samples.s3.amazonaws.com/bootstrap-4/img/jay.png" alt="teacher"/>
+          <h3>Jay Query</h3>
+          <p>Jay is a developer, author of CSS: The Missing Manual, JavaScript &amp; jQuery: The Missing Manual, and web development teacher.</p>
+      </div>
+      <div className="col-sm-6">
+        <img class="teacher-img" src="http://treehouse-code-samples.s3.amazonaws.com/bootstrap-4/img/json.png" alt="teacher"/>
         <h3>Json Babel</h3>
         <p>All of his professional life, Json has worked with computers online; he is a polyglot programmer and likes using the right tools for the job.</p>
-      </li>
-      </ul>
-  </div>
+      </div>
+    </div>
+</div>
 
-
-		);
+  	);
 	}
 }
 
@@ -185,6 +184,7 @@ class App extends React.Component {
       case '/courses':
 				Child = Courses;
 				break;
+        
 			case '/repos':
 				Child = Repos;
 				break;
@@ -210,7 +210,7 @@ class App extends React.Component {
 }       
          
 ReactDOM.render(<App/>,
-document.getElementById('root'));     
+document.getElementById('root1'));     
 
 
 
