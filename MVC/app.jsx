@@ -80,12 +80,94 @@ class Teachers extends React.Component {
 	}
 }
 
+// class Pestañas extends React.Component {
+//   	render(){
+//  return(
+//   <div class="main-content courses">
+//         <div class="course-header group">
+//           <h2>Courses</h2>
+//             <ul class="course-nav">
+//               <li><a aria-current="true" href="#/repost" class="active">HTML</a>
+//               </li>
+//               <li><a aria-current="false" href="/courses/css">CSS</a>
+//               </li>
+//               <li><a aria-current="false" href="/courses/javascript">JavaScript</a></li>
+//             </ul>
+//          </div>
+//         </div>
+//  );  
+//     }
+ 
+// }
 
 
-class Courses extends React.Component {
-	constructor(props){
-    super(props);
-    this.html = [
+// class Courses extends React.Component {
+// 	constructor(props){
+//     super(props);
+//     this.html = [
+//       {
+//         url:"https://achievement-images.teamtreehouse.com/bagdes_html_howtobuildawebsite_stage02.png",
+//         title: "How to Make a Website",
+//         text: "If you’ve never built a website before and you have no coding or design experience, this is the place to start. In this project, we learn how to build a modern portfolio website for desktops, tablets, and mobile devices. We start with basic HTML and CSS syntax. Next, we learn how to build custom web pages with an image gallery and contact page. Finally, we walk through how to share a website live on the web.",
+       
+//       },
+//        {
+//         url:"https://achievement-images.teamtreehouse.com/badges_html_forms_stage1.png",
+//         title: "HTML Forms",
+//         text:"The web is a two-way communication medium. There’s lots of HTML elements for displaying data and producing output, and conversely, there’s also lots of HTML elements for accepting input. Accepting input from the user means creating web forms. In this course, we’ll learn about all the most important form elements that web professionals use on a daily basis"
+//       },
+//       {
+//         url: "https://achievement-images.teamtreehouse.com/badges-html-videoaudio-stage1.png" ,
+//         title:"HTML Video and Audio",
+//         text:"Text and images have always been the foundation of web content, but more than ever, video and audio are also a part of that content mix. Fortunately, we can now create standards-based video and audio players that don't require the use of plugins. Adding video and audio to a webpage is almost as easy as adding an image or formatting some text."
+//       },
+//       {
+//         url:"https://achievement-images.teamtreehouse.com/badges-html-svg-stage1.png" ,  
+//         title:"SVG Basics",
+//         text:"Scalable Vector Graphics (SVG) is an XML markup language for creating two-dimensional images using vectors. This is different from traditional raster-based image formats that use pixels, like JPEG and PNG. When used on web pages, SVG images provide an infinite level of detail, so they look sharp regardless of screen size or pixel density"
+//       },
+//       {
+//         url:"https://achievement-images.teamtreehouse.com/badges_html_respimages_stage2.png" ,
+//         title:"Responsive Images",
+//         text:"Using the new source-set and sizes attributes, and the new picture element, it's possible to create images that behave better in a responsive design. These new pieces of markup allow us to deliver the right image to the right device, based on resolution, pixel density, and other factors we define. This will help web pages load faster and look better, and the most capable devices will get the best looking images possible."
+//       },
+//       {
+//         url:"https://achievement-images.teamtreehouse.com/badges_intro_to_html_css_stage-01.png",
+//         title:">Introduction to HTML and CSS",
+//         text:"Get started creating web pages with HTML and CSS, the basic building blocks of web development. HTML, or Hypertext Markup Language, is a standard set of tags you will use to tell the web browser how the content of your web pages and applications are structured. Use CSS, or Cascading Style Sheets, to select HTML tags and tell the browser what your content should look like. "
+//       }
+//      ];
+
+// }  
+
+// render() {
+// 		return (
+//       	// {Pestañas}
+        
+//    {this.html.map((g)=>{
+//      <div class="row">
+//       <div class="col-sm-2"> <img class="teacher-img" src={g.url}/></div>
+//       <div class="col-sm-10"><h3>{g.title}</h3><p>{g.text}</p></div>
+// </div>
+     
+//       })
+//     }
+
+//     );
+
+
+// }
+// }
+
+class Repos extends React.Component {
+//   	constructor(props){
+//     super(props);
+    
+
+// }  
+
+render() {
+  const html = [
       {
         url:"https://achievement-images.teamtreehouse.com/bagdes_html_howtobuildawebsite_stage02.png",
         title: "How to Make a Website",
@@ -106,64 +188,66 @@ class Courses extends React.Component {
         url:"https://achievement-images.teamtreehouse.com/badges-html-svg-stage1.png" ,  
         title:"SVG Basics",
         text:"Scalable Vector Graphics (SVG) is an XML markup language for creating two-dimensional images using vectors. This is different from traditional raster-based image formats that use pixels, like JPEG and PNG. When used on web pages, SVG images provide an infinite level of detail, so they look sharp regardless of screen size or pixel density"
+      },
+      {
+        url:"https://achievement-images.teamtreehouse.com/badges_html_respimages_stage2.png" ,
+        title:"Responsive Images",
+        text:"Using the new source-set and sizes attributes, and the new picture element, it's possible to create images that behave better in a responsive design. These new pieces of markup allow us to deliver the right image to the right device, based on resolution, pixel density, and other factors we define. This will help web pages load faster and look better, and the most capable devices will get the best looking images possible."
+      },
+      {
+        url:"https://achievement-images.teamtreehouse.com/badges_intro_to_html_css_stage-01.png",
+        title:">Introduction to HTML and CSS",
+        text:"Get started creating web pages with HTML and CSS, the basic building blocks of web development. HTML, or Hypertext Markup Language, is a standard set of tags you will use to tell the web browser how the content of your web pages and applications are structured. Use CSS, or Cascading Style Sheets, to select HTML tags and tell the browser what your content should look like. "
       }
      ];
-}  
-
-render() {
-		return (
-        <section>
-			<div class="main-content courses">
-        <div class="course-header group">
-          <h2>Courses</h2>
-            <ul class="course-nav">
-              <li><a aria-current="true" href="#/about" class="active">HTML</a>
-              </li>
-              <li><a aria-current="false" href="/courses/css">CSS</a>
-              </li>
-              <li><a aria-current="false" href="/courses/javascript">JavaScript</a></li>
-            </ul>
-         </div>
-        </div>
-
-        	<div class="container">
-        <div className="row">
-      <div className="col-sm-6">
-          <img class="teacher-img" src="http://treehouse-code-samples.s3.amazonaws.com/bootstrap-4/img/jay.png" alt="teacher"/>
-          <h3>Jay Query</h3>
-          <p>Jay is a developer, author of CSS: The Missing Manual, JavaScript &amp; jQuery: The Missing Manual, and web development teacher.</p>
-      </div>
-      <div className="col-sm-6">
-        <img class="teacher-img" src="http://treehouse-code-samples.s3.amazonaws.com/bootstrap-4/img/json.png" alt="teacher"/>
-        <h3>Json Babel</h3>
-        <p>All of his professional life, Json has worked with computers online; he is a polyglot programmer and likes using the right tools for the job.</p>
-      </div>
-    </div>
-</div>
-</section>
-    );
-
-
-}
-}
-
-
-
-
-
-
-
-class Repos extends React.Component {
-	render() {
+		const {route} = this.props;
+		let CurrentList = null;
+    console.log(route);
+		switch (route) {
+			case 'css':
+				CurrentList = html.map((course,index)=>{
+                  return <div className="row course" key={index}>
+                            <div className="col-lg-2 col-md-2 col-sm-2 col-xs-2"><img src={course.url}/></div>
+                            <div className="col-lg-10 col-md-10 col-sm-10 col-xs-10">
+                              <h3>{course.title}</h3>
+                              <p>{course.text}</p>
+                            </div>
+                        </div>
+				});
+				break;
+			case 'javascript':
+				CurrentList = html.map((course,index)=>{
+                  return <div className="row course" key={index}>
+                            <div className="col-lg-2 col-md-2 col-sm-2 col-xs-2"><img src={course.url}/></div>
+                            <div className="col-lg-10 col-md-10 col-sm-10 col-xs-10">
+                              <h3>{course.title}</h3>
+                              <p>{course.text}</p>
+                            </div>
+                        </div>
+				});
+			default: //'html'
+      	CurrentList = html.map((course,index)=>{
+                  return <div className="row course" key={index}>
+                            <div className="col-lg-2 col-md-2 col-sm-2 col-xs-2"><img src={course.url}/></div>
+                            <div className="col-lg-10 col-md-10 col-sm-10 col-xs-10">
+                              <h3>{course.title}</h3>
+                              <p>{course.text}</p>
+                            </div>
+                        </div>
+				});
+				break;
+		}
 		return (
 			<div className="main-content courses">
 				<div className="course-header group">
-					<h2>Courses</h2>
+					<h2>REPOS</h2>
 					<ul className="course-nav">
-						<li><a href='/courses/html'>HTML</a></li>
-						<li><a href='/courses/css'>CSS</a></li>
-						<li><a href='/courses/javascript'>JavaScript</a></li>
+						<li><a href='#/repos/html'>HTML</a></li>
+						<li><a  href='#/repos/css'>CSS</a></li>
+						<li><a href='#/repos/javascript'>JavaScript</a></li>
 					</ul>
+          {CurrentList}
+					
 				</div>
 
 				{/* Write routes here... */}
@@ -188,6 +272,7 @@ class App extends React.Component {
 	}
 	render() {
 		let Child;
+    let propsCourses=null;
 		switch (this.state.route) {
 			case '/about':
 				Child = About;
@@ -195,13 +280,23 @@ class App extends React.Component {
       case '/teachers':
 				Child = Teachers;
 				break;
-      case '/courses':
-				Child = Courses;
-				break;
-        
-			case '/repos':
+      case '/repos':
 				Child = Repos;
 				break;
+        
+			  case '/repos/html':
+        Child = Repos;
+        propsCourses='html'
+        break;
+        case '/repos/css':
+        Child = Repos;
+        propsCourses='css'
+        break;
+        case '/repos/javascript':
+        Child = Repos;
+        propsCourses='javascript'
+        break;
+
 			default:
 				Child = Home;
 		}
@@ -213,11 +308,15 @@ class App extends React.Component {
             <li className="active"><a href="#/home">Home</a></li>
             <li><a href="#/about">ABOUT</a></li>
             <li><a href="#/teachers">TEACHERS</a></li>
-            <li><a href="#/courses">COURSES</a></li>
+            <li><a href="#/repos">COURSES</a></li>
           </ul>
         </div>
       </nav>
-    <Child />{' '}
+    {
+      propsCourses?
+      <Child route={propsCourses}/>
+      :<Child/>
+    }
   </div>
  		);
 	}
