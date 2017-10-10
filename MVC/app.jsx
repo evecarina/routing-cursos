@@ -30,13 +30,14 @@ class About extends React.Component {
 
 class Teachers extends React.Component {
 	render() {
-		return (
+	return (
 	<div class="container">
     <div className="row">
       <div className="col-sm-6">
-        <img className="teacher-img" src="http://treehouse-code-samples.s3.amazonaws.com/bootstrap-4/img/angie.png" alt="teacher"/>
+          < img className="teacher-img" src="http://treehouse-code-samples.s3.amazonaws.com/bootstrap-4/img/angie.png" alt="teacher"/>
           <h3>Angie McAngular</h3>
-        <p>Angie is a web developer and teacher who is passionate about building scalable, data driven web apps, especially ones that address old problems with new tech!</p></div>
+          <p>Angie is a web developer and teacher who is passionate about building scalable, data driven web apps, especially ones that address old problems with new tech!</p>
+      </div>
       <div className="col-sm-6">
           <img className="teacher-img" src="http://treehouse-code-samples.s3.amazonaws.com/bootstrap-4/img/nodestradamus.png" alt="teacher"/>
           <h3>NodeStradamus</h3>
@@ -56,7 +57,6 @@ class Teachers extends React.Component {
           <p>Ecma found her passion for computers and programming over 15 years ago. She is excited to introduce people to the wonderful world of JavaScript.</p>
       </div>
     </div>
-
 
     <div className="row">
       <div className="col-sm-6">
@@ -183,8 +183,8 @@ render() {
 			case 'css':
 				CurrentList = css.map((course,index)=>{
                   return <div className="row course" key={index}>
-                            <div className="col-lg-2 col-md-2 col-sm-2 col-xs-2"><img src={course.url}/></div>
-                            <div className="col-lg-10 col-md-10 col-sm-10 col-xs-10">
+                            <div className="col-lg-2 col-md-2 col-sm-12 col-xs-12"><img src={course.url}/></div>
+                            <div className="col-lg-10 col-md-10 col-sm-12 col-xs-12">
                               <h3>{course.title}</h3>
                               <p>{course.text}</p>
                             </div>
@@ -214,20 +214,17 @@ render() {
 				break;
 		}
 		return (
-			<div className="main-content courses">
-				<div className="course-header group">
-					<h2>REPOS</h2>
-					<ul className="course-nav">
-						<li><a href='#/repos/html'>HTML</a></li>
+      <nav className="main-content courses">
+      <div className="container-fluid">
+        <ul className="nav navbar-nav ">
+            <li><a href='#/repos/html'>HTML</a></li>
 						<li><a  href='#/repos/css'>CSS</a></li>
 						<li><a href='#/repos/javascript'>JavaScript</a></li>
-					</ul>
-          {CurrentList}
+        </ul>     
+      </div>
+      {CurrentList}
 					
-				</div>
-
-				{/* Write routes here... */}
-			</div>
+    </nav>
 		);
 	}
 }
@@ -250,13 +247,13 @@ class App extends React.Component {
 		let Child;
     let propsCourses=null;
 		switch (this.state.route) {
-			case '/about':
+		  	case '/about':
 				Child = About;
 				break;
-      case '/teachers':
+        case '/teachers':
 				Child = Teachers;
 				break;
-      case '/repos':
+       case '/repos':
 				Child = Repos;
 				break;
         
@@ -299,4 +296,4 @@ class App extends React.Component {
 }       
          
 ReactDOM.render(<App/>,
-document.getElementById('root1')); 
+document.getElementById('roots')); 
