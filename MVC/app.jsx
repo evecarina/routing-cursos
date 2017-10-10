@@ -14,7 +14,6 @@ class Home extends React.Component {
 		);
 	}
 }
-
 class About extends React.Component {
 	render() {
 		return (
@@ -30,7 +29,7 @@ class About extends React.Component {
 
 class Teachers extends React.Component {
 	render() {
-	return (
+ return (
 	<div class="container">
     <div className="row">
       <div className="col-sm-6">
@@ -71,7 +70,6 @@ class Teachers extends React.Component {
       </div>
     </div>
 </div>
-
   	);
 	}
 }
@@ -176,13 +174,13 @@ render() {
      },
 
      ]
-		const {route} = this.props;
-		let CurrentList = null;
-    console.log(route);
-		switch (route) {
-			case 'css':
-				CurrentList = css.map((course,index)=>{
-                  return <div className="row course" key={index}>
+  const {route} = this.props;
+  let CurrentList = null;
+  console.log(route);
+	switch (route) {
+	 case 'css':
+	  CurrentList = css.map((course,index)=>{
+               return <div className="row course" key={index}>
                             <div className="col-lg-2 col-md-2 col-sm-12 col-xs-12"><img src={course.url}/></div>
                             <div className="col-lg-10 col-md-10 col-sm-12 col-xs-12">
                               <h3>{course.title}</h3>
@@ -190,9 +188,19 @@ render() {
                             </div>
                         </div>
 				});
-				break;
-			case 'javascript':
-				CurrentList =javascript.map((course,index)=>{
+		  break;
+	  case 'javascript':
+	    CurrentList =javascript.map((course,index)=>{
+                   return <div className="row course" key={index}>
+                            <div className="col-lg-2 col-md-2 col-sm-2 col-xs-2"><img src={course.url}/></div>
+                            <div className="col-lg-10 col-md-10 col-sm-10 col-xs-10">
+                              <h3>{course.title}</h3>
+                              <p>{course.text}</p>
+                            </div>
+                        </div>
+		 });
+	   default: //'html'
+      	      CurrentList = html.map((course,index)=>{
                   return <div className="row course" key={index}>
                             <div className="col-lg-2 col-md-2 col-sm-2 col-xs-2"><img src={course.url}/></div>
                             <div className="col-lg-10 col-md-10 col-sm-10 col-xs-10">
@@ -200,35 +208,22 @@ render() {
                               <p>{course.text}</p>
                             </div>
                         </div>
-				});
-			default: //'html'
-      	CurrentList = html.map((course,index)=>{
-                  return <div className="row course" key={index}>
-                            <div className="col-lg-2 col-md-2 col-sm-2 col-xs-2"><img src={course.url}/></div>
-                            <div className="col-lg-10 col-md-10 col-sm-10 col-xs-10">
-                              <h3>{course.title}</h3>
-                              <p>{course.text}</p>
-                            </div>
-                        </div>
-				});
-				break;
+		});
+		 break;
 		}
-		return (
-      <nav className="main-content courses">
-      <div className="container-fluid">
-        <ul className="nav navbar-nav ">
-            <li><a href='#/repos/html'>HTML</a></li>
-						<li><a  href='#/repos/css'>CSS</a></li>
-						<li><a href='#/repos/javascript'>JavaScript</a></li>
-        </ul>     
-      </div>
-      {CurrentList}
-					
-    </nav>
+                return ( <nav className="main-content courses">
+      		 <div className="container-fluid">
+        	   <ul className="nav navbar-nav ">
+           	     <li><a href='#/repos/html'>HTML</a></li>
+	    	     <li><a  href='#/repos/css'>CSS</a></li>
+	   	     <li><a href='#/repos/javascript'>JavaScript</a></li>
+       		   </ul>     
+      		 </div>
+                 {CurrentList}				
+               </nav>
 		);
 	}
 }
-
 class App extends React.Component {
 	constructor(props) {
 		super(props);
@@ -244,35 +239,34 @@ class App extends React.Component {
 		});
 	}
 	render() {
-		let Child;
+    let Child;
     let propsCourses=null;
-		switch (this.state.route) {
-		  case '/about':
-				Child = About;
-			  break;
+    switch (this.state.route) {
+	case '/about':
+         Child = About;
+        break;
         case '/teachers':
-				Child = Teachers;
-			  break;
-      case '/repos':
-				Child = Repos;
-				break;      
-			case '/repos/html':
+	 Child = Teachers;
+	break;
+       case '/repos':
+	Child = Repos;
+	break;      
+	case '/repos/html':
         Child = Repos;
         propsCourses='html'
         break;
-      case '/repos/css':
+       case '/repos/css':
         Child = Repos;
         propsCourses='css'
         break;
-      case '/repos/javascript':
+       case '/repos/javascript':
         Child = Repos;
         propsCourses='javascript'
         break;
-
-			default:
-				Child = Home;
-		}
-		return (
+	default:
+	Child = Home;
+	}
+return (
     <div>
       <nav className="navbar navbar-inverse">
         <div className="container-fluid">
@@ -290,7 +284,7 @@ class App extends React.Component {
       :<Child/>
     }
   </div>
- 		);
+ 	);
 	}
 }              
 ReactDOM.render(<App/>,
