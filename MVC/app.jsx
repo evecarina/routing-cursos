@@ -247,25 +247,24 @@ class App extends React.Component {
 		let Child;
     let propsCourses=null;
 		switch (this.state.route) {
-		  	case '/about':
+		  case '/about':
 				Child = About;
-				break;
+			  break;
         case '/teachers':
 				Child = Teachers;
-				break;
-       case '/repos':
+			  break;
+      case '/repos':
 				Child = Repos;
-				break;
-        
-			  case '/repos/html':
+				break;      
+			case '/repos/html':
         Child = Repos;
         propsCourses='html'
         break;
-        case '/repos/css':
+      case '/repos/css':
         Child = Repos;
         propsCourses='css'
         break;
-        case '/repos/javascript':
+      case '/repos/javascript':
         Child = Repos;
         propsCourses='javascript'
         break;
@@ -293,7 +292,6 @@ class App extends React.Component {
   </div>
  		);
 	}
-}       
-         
+}              
 ReactDOM.render(<App/>,
 document.getElementById('roots')); 
